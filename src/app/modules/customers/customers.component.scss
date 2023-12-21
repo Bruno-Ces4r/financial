@@ -1,0 +1,112 @@
+.container {
+  width: 100%;
+
+  .account-header-container {
+    background-color: var(--color-white);
+    box-sizing: border-box;
+    padding: 0px 24px;
+
+    .account-header-content {
+      width: 100%;
+      max-width: 1200px;
+      margin: 28px auto 0px auto;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .header-title {
+        color: var(--color-black);
+        font-size: 34px;
+        font-weight: var(--font-regular);
+      }
+    }
+  }
+
+  .table-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 28px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .table-content {
+      width: 100%;
+      max-width: 1200px;
+
+      .actions {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 10px;
+
+        button {
+          height: 46px;
+          border-radius: 20px;
+          background-color: #0a4a5b;
+          color: white;
+        }
+
+        .search-content {
+          display: flex;
+          gap: 12px;
+          justify-content: center;
+          align-items: center;
+
+          .btn-search {
+            background-color: white;
+            color: black;
+            margin-bottom: 20px;
+          }
+
+          .search-field {
+            width: max-content;
+          }
+
+          .filter-button {
+            margin-left: 16px;
+            color: var(--color-grey);
+          }
+
+          .options-button {
+            width: 100%;
+            max-width: 186px;
+            height: 56px;
+            margin-left: 16px;
+            line-height: normal;
+          }
+        }
+      }
+
+      .table-adjust {
+        max-height: calc(100vh - 360px);
+        overflow-y: auto;
+        ::-webkit-scrollbar {
+          width: 4px;
+          height: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #adadad;
+          border: 0px none #ffffff;
+          border-radius: 50px;
+        }
+
+        table {
+          width: 100%;
+          height: 100%;
+
+          th {
+            background-color: #11728b;
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}

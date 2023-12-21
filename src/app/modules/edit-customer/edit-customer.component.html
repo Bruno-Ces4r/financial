@@ -1,0 +1,102 @@
+<main class="container">
+  <header class="account-header-container">
+    <div class="account-header-content">
+      <h1 class="header-title">Atualizar dados do cliente</h1>
+    </div>
+  </header>
+  <div class="form-container" fxLayout="row" [formGroup]="registerForm">
+    <div class="form">
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="customer"
+          [maxlength]="maxLength"
+        />
+        <mat-error *ngIf="!showHintError" class="hint-error"
+          >Por favor, informe o nome completo</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>CPF</mat-label>
+        <input
+          matInput
+          [value]="cpf | cpfFormat"
+          [mask]="cpfMask"
+          [disabled]="true"
+        />
+        <mat-error *ngIf="!showHintError" class="hint-error"
+          >Por favor, informe o cpf</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Data Nascimento</mat-label>
+        <input
+          matInput
+          formControlName="birthDate"
+          placeholder="01/01/2002"
+          [mask]="birthMask"
+        />
+        <mat-error *ngIf="!showHintError" class="hint-error"
+          >Por favor, informe a data de nascimento</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Renda Mensal</mat-label>
+        <input
+          matInput
+          formControlName="monthlyIncome"
+          type="text"
+          mask="separator.2"
+          thousandSeparator="."
+          decimalSeparator=","
+          currency="BRL"
+        />
+        <mat-error *ngIf="!showHintError" class="hint-error"
+          >Por favor, informe a renda mensal</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          formControlName="email"
+          autocomplete="email"
+          [maxlength]="maxLength"
+        />
+        <mat-error *ngIf="!showHintError" class="hint-error"
+          >Por favor, revise o seu e-mail</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Data Cadastro</mat-label>
+        <input
+          matInput
+          formControlName="registerDate"
+          placeholder="20/12/2023"
+          [mask]="birthMask"
+        />
+        <mat-error *ngIf="!showHintError" class="hint-error"
+          >Por favor, informe a data de cadastro</mat-error
+        >
+      </mat-form-field>
+    </div>
+    <div class="actions">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="handleSubmit()"
+        [disabled]="registerForm.invalid"
+      >
+        Atualizar dados
+      </button>
+    </div>
+  </div>
+</main>

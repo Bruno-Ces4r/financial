@@ -1,0 +1,22 @@
+{
+  "clientes": [
+    {
+      "customer": "Bruno César Camargo",
+      "birthDate": "01012002",
+      "monthlyIncome": "6000",
+      "email": "bruno@gmail.com",
+      "registerDate": "20122023",
+      "cpf": "22213132000",
+      "id": 3
+    },
+    {
+      "customer": "Post  Malone",
+      "birthDate": "01011990",
+      "monthlyIncome": "60000",
+      "email": "postMalone@gmail.com",
+      "registerDate": "21122023",
+      "cpf": "20202010200",
+      "id": 4
+    }
+  ]
+}
