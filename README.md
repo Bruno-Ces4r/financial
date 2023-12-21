@@ -42,7 +42,11 @@ obs: Utilizar versão superior a 12 do node para isso
 
 1. Rode o comando:
 
-- json-server --watch db.json
+`json-server --watch db.json`
+
+2. Após inicializar o json server
+
+- Realize um F5 no navegador, para a aplicação realizar a conexão novamente
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.29.
 
